@@ -18,6 +18,14 @@ const LoginPage = (props) => {
     history.push("/");
   }
 
+  // useEffect(() => {
+  //   getClientIdGoogle()
+  //     .then(({ data }) => {
+  //       dispatch(setClientIdGoogle(data.data.clientId));
+  //     })
+  //     .catch(console.log);
+  // }, [dispatch, clientIdGoogle]);
+
   const [formInput, setFromInput] = useState({
     email: "",
     password: "",
@@ -88,6 +96,33 @@ const LoginPage = (props) => {
   };
 
   const handleLoginByFacebook = (response) => {
+    // window.fbAsyncInit = function () {
+    //   FacebookLogin.init({
+    //     appId: "1965755637137016",
+    //     cookie: true,
+    //     xfbml: true,
+    //     version: "{api-version}",
+    //   });
+
+    //   FacebookLogin.AppEvents.logPageView();
+    // };
+
+    // (function (d, s, id) {
+    //   var js,
+    //     fjs = d.getElementsByTagName(s)[0];
+    //   if (d.getElementById(id)) {
+    //     return;
+    //   }
+    //   js = d.createElement(s);
+    //   js.id = id;
+    //   js.src = "https://connect.facebook.net/en_US/sdk.js";
+    //   fjs.parentNode.insertBefore(js, fjs);
+    // })(document, "script", "facebook-jssdk");
+
+    // FacebookLogin.getLoginStatus(function (response) {
+    //   // statusChangeCallback(response);
+    //   console.log(response, "<<<< FB2");
+    // });
     console.log(response, "<<<< FB");
   };
 

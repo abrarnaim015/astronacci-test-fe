@@ -17,8 +17,6 @@ function App() {
     if (user) {
       dispatch(setUser(JSON.parse(user)));
     }
-
-    console.log(access_token, user, "<<< APP");
   }, [dispatch]);
 
   return (

@@ -52,7 +52,7 @@ const ContentCard = ({ dataContent }) => {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/xNRJwmlRBNU?si=j5frnh3RAub6xdY0"
+            src={dataContent.url_video}
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

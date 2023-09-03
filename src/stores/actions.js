@@ -1,6 +1,6 @@
 import axios from "../configs/axios";
 import { setContents, setLoading } from "./reducers";
-import { Swal, Toast } from "../configs/swal";
+// import { Swal, Toast } from "../configs/swal";
 
 const googleLogin = (googleToken) => {
   return axios({
@@ -35,7 +35,6 @@ const GetContents = (dispatch, category, access_token) => {
     },
   })
     .then(({ data }) => {
-      console.log(data.articles, "<<<< DATA ACTION");
       dispatch(setContents(data.articles));
     })
     .catch(console.log)
@@ -44,4 +43,11 @@ const GetContents = (dispatch, category, access_token) => {
     });
 };
 
-export { googleLogin, userRegister, userLogin, GetContents };
+const getClientIdGoogle = (dispatch) => {
+  return axios({
+    method: "GET",
+    url: "/clientid",
+  });
+};
+
+export { googleLogin, userRegister, userLogin, GetContents, getClientIdGoogle };

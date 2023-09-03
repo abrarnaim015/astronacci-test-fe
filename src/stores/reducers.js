@@ -8,6 +8,7 @@ const initialState = {
   contentDetail: {},
   category: "general",
   user: {},
+  clientIdGoogle: "",
 };
 
 const appSlice = createSlice({
@@ -32,6 +33,9 @@ const appSlice = createSlice({
     setAccessToken: (state, action) => {
       state.access_token = action.payload;
     },
+    setClientIdGoogle: (state, action) => {
+      state.clientIdGoogle = action.payload;
+    },
   },
 });
 
@@ -42,6 +46,7 @@ export const {
   setUser,
   setUserName,
   setAccessToken,
+  setClientIdGoogle,
 } = appSlice.actions;
 
 export default appSlice.reducer;
